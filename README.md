@@ -1,2 +1,2 @@
-# my-first-repo minor update!
-Practice account for learning Git
+# My personal repo for -coss device- file/project management
+Hello world!
