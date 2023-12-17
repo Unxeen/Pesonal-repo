@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Proxima-nova';
+    src: url(../Fonts/Proxima-nova/ProximaNovaA-Light.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* default rules */
+html{
+    font-size: 62.5%;
+    font-family: 'Proxima-nova', sans-serif
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* header styling*/
+
+.header{
+    border: 1px solid;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+.nav{
+    margin: auto;
+    border: 1px solid;
+    max-width: 120rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
