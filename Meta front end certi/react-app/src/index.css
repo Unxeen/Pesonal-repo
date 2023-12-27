@@ -14,9 +14,10 @@ html{
   font-family: 'Proxima-nova', sans-serif;
 }
 
-/* #root{
+#root{
   overflow: hidden;
-} */
+  height: 100vh;
+}
 
 ul{
   list-style: none;
