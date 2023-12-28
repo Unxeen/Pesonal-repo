@@ -1,28 +1,28 @@
+import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './Header.css'
 
 export default function Header (props){
-    const menuToggle = document.querySelector('.menu-toggle')
-    const menu = document.querySelector('.nav-menu')
-
-    console.log(props.children)
+    
+    const [menuActive, setMenuActive] = useState(false);
 
     const toggleMenu = () => {
-        menuToggle.classList.toggle('active')
-        menu.classList.toggle('active')
+        setMenuActive(
+            (prevState) => {return !prevState;}
+            )
     }
 
 
     return (
         <header className='header'>
-            <nav className='nav'>
+            <nav className={`nav ${menuActive ? 'active' : ''}`}>
 
                 <a href="_blank" className='logo'>
                     <img className='logo-img' src={reactLogo} alt="" />
                     <span className='logo-text'>React</span>
                 </a>
                 
-                <div className="nav-menu">
+                <div className={`nav-menu ${menuActive ? 'active' : ''}`}>
                     
                     <img className='menu-logo-mobile' src={reactLogo} alt="" />
 
@@ -45,7 +45,7 @@ export default function Header (props){
                     </div>
                 </div>
 
-                <button onClick={toggleMenu} className="menu-toggle screen-lg-hidden">
+                <button onClick={toggleMenu} className={`menu-toggle screen-lg-hidden ${menuActive ? 'active' : ''}`}>
                     <i className="ri-menu-line bar-icon"></i>
                     <i className="ri-close-line close-icon"></i>
                 </button>

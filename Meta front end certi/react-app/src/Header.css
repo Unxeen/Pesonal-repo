@@ -3,6 +3,7 @@
     padding: 2rem 4rem;
     position: relative;
     z-index: 10;
+    /* overflow: hidden; */
 }
 
 .nav{
@@ -64,16 +65,17 @@
     position: absolute;
     z-index: 20;
     top: 0;
-    left: 0;
+    left: 100%;
+    /* left: 0; */
+    /* opacity: 0; */
     /* transform: translateX(100%); */
-    /* transition: transform .25s ease; */
+    transition: transform .25s ease;
     width: 100%;
     height: 100vh;
-    display: none;
 }
 .nav-menu.active{
-    /* transform: translateX(-100%); */
-    display: initial;
+    transform: translateX(-100%);
+    /* left: 0; */
 }
 .menu-logo-mobile{
     align-self: flex-start;
